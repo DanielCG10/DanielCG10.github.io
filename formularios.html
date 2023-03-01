@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="">
+    <style>
+
+    </style>
+</head>
+<body style="background-color: rgb(34, 21, 70)">
+    <header>
+        <div>
+            <h1 style="text-align: center; color:aliceblue">Formularios en HTML</h1>
+        </div>
+    </header>
+    <nav>
+        <div style="background-color: rgb(152, 151, 151); text-align: center;">
+            <br>
+            <a href="index.html">Inicio</a>&nbsp;&nbsp;
+            <br><br><hr>
+        </div>
+    </nav>
+    <section id="seccion5" style="color: aliceblue;">
+                <br><br>
+              <P>
+                El elemento HTML &lt;form&gt; se utiliza para crear un formulario HTML para la entrada del usuario. <br>
+                El &lt;form&lt; elemento es un contenedor para diferentes tipos de elementos de entrada, como: campos de texto, casillas de verificación, botones de opción, botones de envío, etc. <br>
+
+              </P>
+        <h3 style="text-align: left;">Elemento &lt;label&gt;</h3>
+        <p>
+            Observe el uso del &lt;label&gt; elemento en el ejemplo anterior. <br>
+            La &lt;label&gt; etiqueta define una etiqueta para muchos elementos de formulario. <br>
+
+        </p>
+        <h3 style="text-align: left;">Boton enviar</h3>
+        <p>
+            &lt;input type="submit"&gt; un botón para enviar los datos del formulario a un controlador de formulario.<br>
+            El controlador de formulario suele ser un archivo en el servidor con un script para procesar los datos de entrada.<br>
+        </p>
+        <h3 style="text-align: left;">Ejemplo:</h3>
+        <img style="height: 200px; width: 500px;" src="formularios.png" alt="Programacion">
+       
+      <h3 style="text-align: left;">Resultado:</h3>
+
+      <form action="ejemplo.php">
+        <label for="fname">Nombre:</label><br>
+        <input type="text" id="fname" name="fname" value="Daniel"><br>
+        <label for="lname">Apellido:</label><br>
+        <input type="text" id="lname" name="lname" value="Cardoza"><br>
+        <label for="edad">Edad:</label><br>
+        <input type="text" id="edad" name="edad" value="22"><br><br>
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+    
+
+    </body>
+    </html>
