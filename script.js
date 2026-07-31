@@ -14,11 +14,10 @@ function login() {
 
 
         mensaje.style.color = "#9cffb0";
-        mensaje.innerHTML = "❤️ Abriendo nuestra historia...";
+        mensaje.innerHTML = "Abriendo";
 
 
         caja.style.animation = "fadeOut .8s forwards";
-
 
         setTimeout(() => {
 
@@ -34,7 +33,7 @@ function login() {
         mensaje.style.color = "#ffb5b5";
 
         mensaje.innerHTML =
-        "Parece que olvidaste uno de nuestros recuerdos ❤️";
+        "Vamos, yo se que puedes";
 
 
         document.getElementById("password").value = "";

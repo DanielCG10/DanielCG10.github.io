@@ -134,11 +134,11 @@ body::before{
 
 .login-box h2{
 
-    font-size:clamp(20px,4vw,32px);
+    font-size:clamp(26px,5vw,43px);
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 
-    font-weight:300;
+    font-weight:400;
 
 }
 
@@ -147,7 +147,7 @@ body::before{
 
     opacity:.8;
 
-    font-size:clamp(14px,3vw,18px);
+    font-size:clamp(17px,4vw,21px);
 
     line-height:1.5;
 
