@@ -1,0 +1,416 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at center,#20283f,#05060b);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:50px 15px;
+
+    overflow-x:hidden;
+
+}
+
+
+/* estrellas */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+}
+
+
+
+/* contenedor */
+
+.carta-container{
+
+    width:100%;
+
+    max-width:900px;
+
+}
+
+
+
+/* carta */
+
+.carta{
+
+
+    position:relative;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #fffdf5,
+        #f8ead0
+    );
+
+
+    padding:
+
+    clamp(30px,7vw,80px);
+
+
+    border-radius:8px;
+
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.55),
+
+    inset 0 0 40px rgba(150,100,50,.15);
+
+
+
+    border:
+
+    2px solid rgba(190,145,80,.5);
+
+
+    animation:
+
+    entrada 1.5s ease;
+
+
+    overflow:hidden;
+
+}
+
+
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(60px)
+
+        rotateX(10deg);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+
+
+
+/* borde interior */
+
+.carta::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:20px;
+
+
+    border:
+
+    1px solid rgba(160,110,50,.35);
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+/* textura papel */
+
+.carta::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(120,80,30,.08) 1px,
+        transparent 1px
+    );
+
+
+    background-size:20px 20px;
+
+
+    opacity:.3;
+
+
+    pointer-events:none;
+
+}
+
+
+
+
+.decoracion{
+
+
+    text-align:center;
+
+
+    font-size:55px;
+
+
+    margin-bottom:20px;
+
+
+    animation:
+
+    latido 2s infinite;
+
+}
+
+
+
+@keyframes latido{
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+
+
+
+
+h1{
+
+
+    font-family:"Great Vibes", cursive;
+
+
+    text-align:center;
+
+
+    font-size:
+
+    clamp(45px,8vw,75px);
+
+
+    color:#a33f58;
+
+
+    font-weight:400;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+.linea{
+
+
+    width:70%;
+
+
+    height:2px;
+
+
+    margin:
+
+    auto auto 40px;
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        #b8894b,
+
+        transparent
+
+    );
+
+}
+
+
+
+
+.contenido{
+
+
+    font-family:
+
+    "Cormorant Garamond",serif;
+
+
+    font-size:
+
+    clamp(21px,3vw,27px);
+
+
+    color:#49352d;
+
+
+    line-height:1.8;
+
+
+    position:relative;
+
+
+    z-index:2;
+
+}
+
+
+
+
+.contenido p{
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.contenido p:first-child{
+
+
+    font-size:32px;
+
+
+    font-weight:600;
+
+
+    color:#8c4050;
+
+
+}
+
+
+
+
+
+.firma{
+
+
+    margin-top:70px;
+
+
+    text-align:right;
+
+
+    font-family:
+
+    "Great Vibes",cursive;
+
+
+    font-size:
+
+    clamp(35px,5vw,55px);
+
+
+    color:#a33f58;
+
+
+}
+
+
+
+
+/* pequeños detalles */
+
+.carta .firma::before{
+
+
+    content:"❦";
+
+
+    display:block;
+
+
+    font-family:
+
+    "Cormorant Garamond";
+
+
+    font-size:40px;
+
+
+    color:#b8894b;
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    body{
+
+        padding:20px 10px;
+
+    }
+
+
+
+    .carta::before{
+
+        inset:12px;
+
+    }
+
+
+    .contenido{
+
+        text-align:left;
+
+    }
+
+
+}

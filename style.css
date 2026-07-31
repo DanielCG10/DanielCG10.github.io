@@ -1,0 +1,408 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+
+}
+
+
+/* ==========================
+   DOCUMENTO
+========================== */
+
+html{
+
+    width:100%;
+    min-height:100%;
+
+}
+
+
+body{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+    min-height:100dvh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:15px;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+}
+
+
+/* Fondo siempre visible */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+    linear-gradient(
+        180deg,
+        #02040d,
+        #07172e,
+        #132850
+    );
+
+}
+
+
+/* ==========================
+   ESTRELLAS
+========================== */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+
+
+/* ==========================
+   LOGIN
+========================== */
+
+.login-box{
+
+    width:95%;
+
+    max-width:480px;
+
+    min-height:420px;
+
+    padding:clamp(30px,6vw,55px);
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 0 40px rgba(0,0,0,.4);
+
+    text-align:center;
+
+    color:white;
+
+    animation:fade .8s ease;
+
+}
+
+
+
+/* ==========================
+   TITULOS
+========================== */
+
+.login-box h1{
+
+    font-size:clamp(45px,8vw,70px);
+
+    margin-bottom:15px;
+
+}
+
+
+.login-box h2{
+
+    font-size:clamp(20px,4vw,32px);
+
+    margin-bottom:20px;
+
+    font-weight:300;
+
+}
+
+
+.login-box p{
+
+    opacity:.8;
+
+    font-size:clamp(14px,3vw,18px);
+
+    line-height:1.5;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* ==========================
+   INPUTS
+========================== */
+
+input{
+
+    width:100%;
+
+    height:55px;
+
+    padding:0 16px;
+
+    border:none;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+    font-size:16px;
+
+    outline:none;
+
+    background:rgba(255,255,255,.95);
+
+}
+
+
+input[type="date"]{
+
+    appearance:none;
+    -webkit-appearance:none;
+
+    color:#333;
+
+}
+
+
+
+/* ==========================
+   BOTON
+========================== */
+
+button{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    background:#ff5d9e;
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.03);
+
+    background:#ff78af;
+
+}
+
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+
+
+/* ==========================
+   MENSAJE
+========================== */
+
+#mensaje{
+
+    display:block;
+
+    margin-top:18px;
+
+    min-height:20px;
+
+    color:#ffb5b5;
+
+    font-size:15px;
+
+}
+
+
+
+/* ==========================
+   ANIMACIONES
+========================== */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(35px)
+        scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+}
+
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* ==========================
+   MOVILES
+========================== */
+
+@media(max-width:400px){
+
+    body{
+
+        padding:10px;
+
+    }
+
+    .login-box{
+
+        width:100%;
+
+        min-height:auto;
+
+        padding:25px;
+
+        border-radius:22px;
+
+    }
+
+}
+
+
+
+/* ==========================
+   LANDSCAPE
+========================== */
+
+@media(max-height:600px) and (orientation:landscape){
+
+    body{
+
+        align-items:flex-start;
+
+        padding-top:20px;
+
+        padding-bottom:30px;
+
+    }
+
+    .login-box{
+
+        min-height:auto;
+
+        margin-bottom:20px;
+
+        padding:25px;
+
+    }
+
+    .login-box h1{
+
+        font-size:40px;
+
+        margin-bottom:5px;
+
+    }
+
+    .login-box h2{
+
+        font-size:22px;
+
+        margin-bottom:10px;
+
+    }
+
+    .login-box p{
+
+        margin-bottom:15px;
+
+    }
+
+}
